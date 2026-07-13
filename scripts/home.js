@@ -1,65 +1,20 @@
 'use strict';
 
 /**
- * AAH — script.js
- * Sin dependencias externas. Organizado por feature para que cada
- * bloque se pueda tocar de forma aislada.
+ * AAH — home.js
+ * Exclusivo de index.html. Requiere global.js cargado antes
+ * (usa el mismo DOMContentLoaded, así que el orden en el
+ * <script> no afecta, pero global.js debe ir primero igual
+ * por prolijidad y por si algún día comparten una función).
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initHeaderScroll();
-  initMobileNav();
   initPdfDownloads();
   initContactForm();
-  initScrollReveal();
 });
 
 /* -----------------------------------------------------------
-   1) Header con sombra al hacer scroll
------------------------------------------------------------ */
-function initHeaderScroll() {
-  const header = document.getElementById('site-header');
-  if (!header) return;
-
-  const onScroll = () => {
-    header.classList.toggle('is-scrolled', window.scrollY > 8);
-  };
-
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-}
-
-/* -----------------------------------------------------------
-   2) Menú móvil (hamburguesa)
------------------------------------------------------------ */
-function initMobileNav() {
-  const toggle = document.getElementById('nav-toggle');
-  const nav = document.getElementById('primary-nav');
-  if (!toggle || !nav) return;
-
-  const closeNav = () => {
-    nav.classList.remove('is-open');
-    toggle.setAttribute('aria-expanded', 'false');
-  };
-
-  toggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('is-open');
-    toggle.setAttribute('aria-expanded', String(isOpen));
-  });
-
-  // Cerrar al elegir un link (útil en mobile)
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', closeNav);
-  });
-
-  // Cerrar con Escape
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeNav();
-  });
-}
-
-/* -----------------------------------------------------------
-   3) Descarga de PDFs (Revista / Normativa)
+   Descarga de PDFs (Revista / Normativa)
    -----------------------------------------------------------
    Los botones con [data-pdf] apuntan a un archivo dentro de /assets/pdf/.
    Si el archivo todavía no existe (placeholder), avisamos al usuario
@@ -115,7 +70,7 @@ function triggerDownload(url, fileName) {
 }
 
 /* -----------------------------------------------------------
-   4) Formulario de contacto
+   Formulario de contacto
    -----------------------------------------------------------
    Validación en cliente. El envío real (fetch a un endpoint PHP,
    FormSubmit, etc.) se conecta acá mismo, en submitContactForm(),
@@ -178,36 +133,4 @@ function submitContactForm(fields) {
   return new Promise((resolve) => {
     setTimeout(resolve, 700); // simula latencia de red
   });
-}
-
-/* -----------------------------------------------------------
-   5) Scroll reveal liviano (IntersectionObserver)
------------------------------------------------------------ */
-function initScrollReveal() {
-  const targets = document.querySelectorAll(
-    '.feature-card, .obj-card, .destacado-card, .memoriam-card, .historia-stat'
-  );
-  if (!targets.length) return;
-
-  targets.forEach((el) => el.classList.add('reveal'));
-
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-    targets.forEach((el) => el.classList.add('is-visible'));
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
-
-  targets.forEach((el) => observer.observe(el));
 }

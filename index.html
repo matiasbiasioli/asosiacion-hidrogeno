@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
 
@@ -26,19 +27,7 @@
 
     <div class="container header-main">
       <a href="index.html" class="brand" aria-label="AAH - Ir al inicio">
-        <svg class="brand-mark" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="22" cy="22" r="21" stroke="#4fc3f0" stroke-width="2"/>
-          <circle cx="16" cy="18" r="3" fill="#0a5c8a"/>
-          <circle cx="28" cy="18" r="3" fill="#0a5c8a"/>
-          <circle cx="22" cy="27" r="3" fill="#17a673"/>
-          <line x1="16" y1="18" x2="22" y2="27" stroke="#0a5c8a" stroke-width="1.5"/>
-          <line x1="28" y1="18" x2="22" y2="27" stroke="#0a5c8a" stroke-width="1.5"/>
-          <line x1="16" y1="18" x2="28" y2="18" stroke="#0a5c8a" stroke-width="1.5"/>
-        </svg>
-        <span class="brand-text">
-          <strong>AAH</strong>
-          <small>Asociación Argentina del Hidrógeno</small>
-        </span>
+        <img src="assets/img/logo.png" alt="Asociación Argentina del Hidrógeno" class="brand-logo">
       </a>
 
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú de navegación">
@@ -152,7 +141,7 @@
 
     <!-- ===================== IN MEMORIAM ===================== -->
     <section class="memoriam container">
-      <div class="memoriam-card">
+      <div class="memoriam-card reveal-target">
         <span class="memoriam-tag">In memoriam</span>
         <h2>Homenaje a quienes fundaron y sostuvieron la AAH</h2>
         <div class="memoriam-people">
@@ -179,7 +168,7 @@
         </p>
 
         <div class="cards-grid three">
-          <article class="feature-card">
+          <article class="feature-card reveal-target">
             <div class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 40 40" width="36" height="36"><circle cx="20" cy="20" r="18" fill="none" stroke="#4fc3f0" stroke-width="2.5"/><path d="M12 20a8 8 0 1116 0 8 8 0 01-16 0z" fill="none" stroke="#0a5c8a" stroke-width="2.5"/></svg>
             </div>
@@ -187,7 +176,7 @@
             <p>El hidrógeno como reservorio natural donde coexisten las energías renovables que le dieron origen.</p>
           </article>
 
-          <article class="feature-card">
+          <article class="feature-card reveal-target">
             <div class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 40 40" width="36" height="36"><path d="M6 24h20l-4-4M26 16l4 4-4 4" stroke="#17a673" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
@@ -195,7 +184,7 @@
             <p>El vector energético más eficiente para conducir y distribuir energía limpia a los usuarios finales.</p>
           </article>
 
-          <article class="feature-card">
+          <article class="feature-card reveal-target">
             <div class="feature-icon" aria-hidden="true">
               <svg viewBox="0 0 40 40" width="36" height="36"><path d="M20 4l4 12h12l-10 8 4 12-10-8-10 8 4-12-10-8h12z" fill="none" stroke="#0a5c8a" stroke-width="2"/></svg>
             </div>
@@ -213,24 +202,24 @@
         <p class="section-lead">Propender a una mejor calidad de vida para las generaciones futuras y al uso eficiente de la energía disponible.</p>
 
         <div class="cards-grid three">
-          <article class="obj-card">
+          <article class="obj-card reveal-target">
             <span class="obj-number">01</span>
             <h3>Preservación ambiental</h3>
             <p>Contribuir a la recuperación y preservación del medio ambiente, especialmente en las grandes ciudades.</p>
           </article>
-          <article class="obj-card">
+          <article class="obj-card reveal-target">
             <span class="obj-number">02</span>
             <h3>Vinculación sectorial</h3>
             <p>Promover la coordinación entre gobierno, industrias, instituciones de I+D y universidades.</p>
           </article>
-          <article class="obj-card">
+          <article class="obj-card reveal-target">
             <span class="obj-number">03</span>
             <h3>Difusión y enseñanza</h3>
             <p>Difundir el concepto de la tecnología del hidrógeno en todos los niveles educativos.</p>
           </article>
         </div>
 
-        <a href="objetivos.html" class="btn btn-outline objetivos-cta">Ver los 10 objetivos completos</a>
+        <a href="objetivos.html" class="btn btn-outline objetivos-cta">Ver los 11 objetivos completos</a>
       </div>
     </section>
 
@@ -240,7 +229,7 @@
         <h2 class="section-title">Destacados</h2>
 
         <div class="cards-grid three">
-          <article class="destacado-card">
+          <article class="destacado-card reveal-target">
             <div class="destacado-icon revista" aria-hidden="true">H2</div>
             <h3>Revista Hidrógeno</h3>
             <p>La primera publicación en español dedicada al hidrógeno y sus tecnologías, editada desde 1998.</p>
@@ -250,14 +239,14 @@
             </button>
           </article>
 
-          <article class="destacado-card">
+          <article class="destacado-card reveal-target">
             <div class="destacado-icon normativa" aria-hidden="true">⚖</div>
             <h3>Normativa &amp; Legislación</h3>
             <p>Marco regulatorio y documentación técnica de seguridad para el manejo del hidrógeno en Argentina.</p>
             <a href="normativa.html" class="btn btn-outline">Consultar normativa</a>
           </article>
 
-          <article class="destacado-card">
+          <article class="destacado-card reveal-target">
             <div class="destacado-icon novedades" aria-hidden="true">✦</div>
             <h3>Novedades</h3>
             <p>La transición energética hacia el uso del hidrógeno para el desarrollo sustentable en la Patagonia.</p>
@@ -280,7 +269,7 @@
           </p>
           <a href="institucional.html" class="btn btn-ghost">Conocer nuestra historia →</a>
         </div>
-        <div class="historia-stat">
+        <div class="historia-stat reveal-target">
           <span class="stat-number">1996</span>
           <span class="stat-label">Año de fundación en Buenos Aires</span>
         </div>
@@ -348,6 +337,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="scripts/global.js"></script>
+  <script src="scripts/home.js"></script>
 </body>
 </html>

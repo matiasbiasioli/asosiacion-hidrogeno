@@ -1,0 +1,74 @@
+/* =========================================================
+   AAH — objetivos.css
+   Exclusivo de objetivos.html. Requiere global.css cargado antes.
+   ========================================================= */
+
+.objetivos-grid-section { padding-top: 3rem; }
+
+.objetivos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.objetivo-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition);
+  position: relative;
+}
+.objetivo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.objetivo-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eaf6fb;
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+.objetivo-icon svg { width: 26px; height: 26px; }
+
+.objetivo-number {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-hydrogen);
+}
+
+.objetivo-card h2 {
+  font-size: 1.08rem;
+  padding-right: 2.5rem;
+}
+.objetivo-card p { font-size: .92rem; margin-bottom: 0; }
+
+/* Alterna el color de fondo del ícono cada 3 tarjetas para que la grilla no sea monótona */
+.objetivo-card:nth-child(3n+2) .objetivo-icon { background: #eafaf3; color: var(--color-accent-dark); }
+.objetivo-card:nth-child(3n+3) .objetivo-icon { background: #fff4e0; color: #b8790f; }
+
+.objetivos-cta-section { text-align: center; }
+.objetivos-cta-inner { max-width: 640px; margin-inline: auto; }
+.objetivos-cta-inner .section-lead { margin-inline: auto; margin-bottom: 1.75rem; }
+.objetivos-cta-actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 960px) {
+  .objetivos-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .objetivos-grid { grid-template-columns: 1fr; }
+}

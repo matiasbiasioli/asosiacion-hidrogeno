@@ -1,7 +1,10 @@
 /* =========================================================
-   AAH — Asociación Argentina del Hidrógeno
-   Design tokens
+   AAH — global.css
+   Compartido por TODAS las páginas: tokens, reset, header,
+   footer, botones, y utilidades genéricas de sección.
+   No poner acá nada específico de una sola página.
    ========================================================= */
+
 :root {
   /* Color */
   --color-primary: #0a5c8a;
@@ -138,14 +141,12 @@ button { font-family: inherit; cursor: pointer; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: .85rem;
+  padding-block: .6rem;
   gap: 1rem;
 }
 
 .brand { display: flex; align-items: center; gap: .65rem; }
-.brand-text { display: flex; flex-direction: column; line-height: 1.2; }
-.brand-text strong { font-family: var(--font-display); font-size: 1.15rem; color: var(--color-primary-dark); }
-.brand-text small { font-size: .68rem; color: var(--color-text-muted); }
+.brand-logo { height: 104px; width: auto; }
 
 .primary-nav ul {
   display: flex;
@@ -197,82 +198,27 @@ button { font-family: inherit; cursor: pointer; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* =========================================================
-   Hero
+   Page hero — usado por todas las páginas internas
+   (institucional, objetivos, el-hidrogeno, etc.)
    ========================================================= */
-.hero { padding-block: 3.5rem 4rem; overflow: hidden; }
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+.page-hero {
+  padding-block: 3.5rem 3rem;
+  background: linear-gradient(180deg, #eef4f8 0%, var(--color-bg) 100%);
 }
-.hero h1 {
-  font-size: clamp(2rem, 4vw, 2.85rem);
-  margin-bottom: .4em;
-}
-.hero-lead {
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: var(--color-accent-dark);
-  font-size: 1.15rem;
-}
-.hero-text { max-width: 46ch; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
-
-.hero-visual { display: flex; justify-content: center; }
-.h2-diagram { width: 100%; max-width: 440px; }
-
-#turbine-blades { transform-origin: 240px 40px; animation: spin 6s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg) translate(0,0); } }
-#turbine-blades { animation-name: spin-blades; }
-@keyframes spin-blades { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-#h2-molecule circle { animation: pulse 3s ease-in-out infinite; transform-origin: center; }
-#h2-molecule circle:nth-child(4) { animation-delay: .3s; }
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.06); }
-}
-.convergence-lines path { stroke-dasharray: 6 6; animation: dash 2.4s linear infinite; }
-@keyframes dash { to { stroke-dashoffset: -24; } }
-
-/* =========================================================
-   In Memoriam
-   ========================================================= */
-.memoriam { margin-block: -1.5rem 0; position: relative; z-index: 2; }
-.memoriam-card {
-  background: var(--color-surface);
-  border-left: 5px solid var(--color-primary);
-  border-radius: var(--radius-md);
-  padding: 1.75rem 2rem;
-  box-shadow: var(--shadow-card);
-}
-.memoriam-tag {
+.eyebrow {
   display: inline-block;
-  font-size: .72rem;
+  font-size: .75rem;
   font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
-  color: var(--color-primary);
-  background: #e8f3f9;
-  padding: .25rem .7rem;
-  border-radius: 999px;
+  color: var(--color-accent-dark);
   margin-bottom: .6rem;
 }
-.memoriam-card h2 { font-size: 1.3rem; }
-.memoriam-people {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: 1rem 0;
-}
-.memoriam-name { margin: 0; font-weight: 700; color: var(--color-text); }
-.memoriam-role { margin: 0; font-size: .88rem; }
-.memoriam-link { font-weight: 600; color: var(--color-accent-dark); }
-.memoriam-link:hover { text-decoration: underline; }
+.page-hero h1 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); max-width: 22ch; }
+.page-hero .section-lead { margin-top: .75rem; }
 
 /* =========================================================
-   Sections
+   Section utilities — genéricas, usadas en todas las páginas
    ========================================================= */
 .section { padding-block: 4.5rem; }
 .alt-bg { background: #eef4f8; }
@@ -285,113 +231,6 @@ button { font-family: inherit; cursor: pointer; }
   margin-top: 2.25rem;
 }
 .cards-grid.three { grid-template-columns: repeat(3, 1fr); }
-
-/* Feature / obj / destacado cards share a base look */
-.feature-card, .obj-card, .destacado-card {
-  background: var(--color-surface);
-  border-radius: var(--radius-md);
-  padding: 1.75rem;
-  box-shadow: var(--shadow-card);
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-.feature-card:hover, .obj-card:hover, .destacado-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
-}
-.feature-icon {
-  width: 56px; height: 56px;
-  display: flex; align-items: center; justify-content: center;
-  background: #eaf6fb;
-  border-radius: var(--radius-sm);
-  margin-bottom: 1rem;
-}
-.feature-card h3, .obj-card h3, .destacado-card h3 { font-size: 1.1rem; }
-
-.obj-number {
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--color-hydrogen);
-  font-size: 1.6rem;
-}
-.objetivos-cta { margin-top: 2.5rem; }
-
-.destacado-icon {
-  width: 52px; height: 52px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-}
-.destacado-icon.revista { background: var(--color-primary); }
-.destacado-icon.normativa { background: var(--color-accent); }
-.destacado-icon.novedades { background: var(--color-hydrogen); }
-.destacado-card .btn { margin-top: .5rem; }
-
-/* =========================================================
-   Historia
-   ========================================================= */
-.historia-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 2.5rem;
-  align-items: center;
-}
-.historia-stat {
-  background: var(--color-primary);
-  color: #fff;
-  border-radius: var(--radius-lg);
-  padding: 2.5rem;
-  text-align: center;
-}
-.stat-number {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 3rem;
-  font-weight: 700;
-}
-.stat-label { color: #cfe6f2; margin: 0; }
-
-/* =========================================================
-   Contacto
-   ========================================================= */
-.contacto-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 3rem;
-}
-.contacto-list { margin-top: 1.5rem; }
-.contacto-list li { margin-bottom: .5rem; }
-.contacto-list a { color: var(--color-primary); font-weight: 600; }
-
-.contacto-form {
-  background: var(--color-surface);
-  border-radius: var(--radius-md);
-  padding: 2rem;
-  box-shadow: var(--shadow-card);
-}
-.form-row { margin-bottom: 1.1rem; display: flex; flex-direction: column; gap: .4rem; }
-.form-row label { font-size: .85rem; font-weight: 600; color: var(--color-text); }
-.form-row input, .form-row textarea {
-  font-family: inherit;
-  font-size: .95rem;
-  padding: .7rem .9rem;
-  border: 1.5px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  background: var(--color-bg);
-  transition: border-color var(--transition);
-  resize: vertical;
-}
-.form-row input:focus, .form-row textarea:focus {
-  border-color: var(--color-hydrogen);
-  outline: none;
-}
-.form-row.has-error input, .form-row.has-error textarea { border-color: #d64545; }
-.form-status { font-size: .88rem; margin-top: .75rem; min-height: 1.2em; }
-.form-status.success { color: var(--color-accent-dark); }
-.form-status.error { color: #d64545; }
 
 /* =========================================================
    Footer
@@ -437,21 +276,20 @@ button { font-family: inherit; cursor: pointer; }
 .footer-bottom a:hover { color: #fff; }
 
 /* =========================================================
-   Scroll reveal
+   Scroll reveal — activado por global.js en cualquier página
    ========================================================= */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.is-visible { opacity: 1; transform: none; }
+.reveal-target { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal-target.is-visible { opacity: 1; transform: none; }
 
 /* =========================================================
-   Responsive
+   Responsive — solo lo que afecta al layout compartido
    ========================================================= */
 @media (max-width: 960px) {
-  .hero-grid, .historia-grid, .contacto-grid { grid-template-columns: 1fr; }
-  .hero-visual { order: -1; }
   .cards-grid.three { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 780px) {
+  .brand-logo { height: 78px; }
   .nav-toggle { display: flex; }
   .primary-nav {
     position: fixed;
@@ -468,8 +306,4 @@ button { font-family: inherit; cursor: pointer; }
   .primary-nav ul { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
   .nav-cta { margin-top: 1.5rem; }
   .cards-grid.three { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 520px) {
-  .memoriam-people { flex-direction: column; gap: 1rem; }
 }
