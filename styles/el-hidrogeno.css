@@ -1,0 +1,232 @@
+/* =========================================================
+   AAH — el-hidrogeno.css
+   Exclusivo de el-hidrogeno.html. Requiere global.css cargado antes.
+   ========================================================= */
+
+.section-body { max-width: 75ch; margin-top: 1.5rem; }
+
+/* =========================================================
+   Nav de anclas
+   ========================================================= */
+.index-pills-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+.index-pills {
+  display: flex;
+  gap: .5rem;
+  overflow-x: auto;
+  padding-block: .75rem;
+  scrollbar-width: none;
+}
+.index-pills::-webkit-scrollbar { display: none; }
+.index-pills a {
+  flex-shrink: 0;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  padding: .45rem 1rem;
+  border-radius: 999px;
+  background: var(--color-bg);
+  white-space: nowrap;
+  transition: background var(--transition), color var(--transition);
+}
+.index-pills a:hover { background: #e8f3f9; color: var(--color-primary); }
+
+/* =========================================================
+   Fact strip
+   ========================================================= */
+.fact-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.fact-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+.fact-number {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--color-hydrogen);
+  margin-bottom: .4rem;
+}
+.fact-label { font-size: .85rem; color: var(--color-text-muted); line-height: 1.5; }
+
+/* =========================================================
+   Timeline
+   ========================================================= */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  position: relative;
+}
+.timeline-item {
+  border-top: 3px solid var(--color-hydrogen);
+  padding-top: 1rem;
+}
+.timeline-year {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  font-size: 1.1rem;
+  margin-bottom: .4rem;
+}
+.timeline-item p { font-size: .9rem; margin-bottom: 0; }
+
+/* =========================================================
+   Isótopos
+   ========================================================= */
+.isotope-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+.isotope-symbol {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--color-primary);
+  margin-bottom: .5rem;
+}
+.isotope-card h3 { font-size: 1.1rem; }
+.isotope-card p { font-size: .9rem; margin-bottom: 0; }
+
+.info-note {
+  margin-top: 2rem;
+  background: #eaf6fb;
+  border-left: 4px solid var(--color-hydrogen);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem 1.75rem;
+}
+.info-note h3 { font-size: 1.05rem; margin-bottom: .5rem; }
+.info-note p { margin-bottom: 0; max-width: 75ch; }
+
+/* =========================================================
+   Seguridad — checklist grid
+   ========================================================= */
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .9rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.safety-item {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  padding: .85rem 1rem;
+  box-shadow: var(--shadow-card);
+}
+.safety-item svg {
+  width: 20px; height: 20px;
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+.safety-item span { font-size: .88rem; font-weight: 500; }
+
+/* =========================================================
+   Ventajas ecológicas
+   ========================================================= */
+.advantage-list {
+  list-style: none;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .9rem;
+}
+.advantage-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  font-size: .95rem;
+  color: var(--color-text-muted);
+  max-width: 75ch;
+}
+.advantage-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .5em;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+/* =========================================================
+   Aplicaciones
+   ========================================================= */
+.application-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+}
+.application-icon {
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  background: #eaf6fb;
+  color: var(--color-primary);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+}
+.application-card h3 { font-size: 1.2rem; }
+
+/* =========================================================
+   Artículo destacado
+   ========================================================= */
+.article-highlight-section { padding-top: 0; }
+.article-highlight {
+  display: flex;
+  gap: 1.75rem;
+  align-items: flex-start;
+  background: var(--color-primary-dark);
+  color: #cfe6f2;
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+}
+.article-highlight-icon {
+  flex-shrink: 0;
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.1);
+  border-radius: var(--radius-sm);
+  font-size: 1.6rem;
+}
+.article-highlight .eyebrow { color: var(--color-hydrogen); }
+.article-highlight h3 { color: #fff; font-size: 1.2rem; margin-top: .3rem; max-width: 60ch; }
+.article-highlight p { color: #a9c8d8; margin-top: .5rem; }
+.article-highlight .btn-outline { border-color: var(--color-hydrogen); color: var(--color-hydrogen); margin-top: 1rem; }
+.article-highlight .btn-outline:hover { background: var(--color-hydrogen); color: var(--color-primary-dark); }
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 960px) {
+  .fact-strip { grid-template-columns: 1fr 1fr; }
+  .timeline { grid-template-columns: 1fr 1fr; }
+  .safety-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .fact-strip { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: 1fr; }
+  .safety-grid { grid-template-columns: 1fr; }
+  .article-highlight { flex-direction: column; }
+}
