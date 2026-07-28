@@ -1,0 +1,85 @@
+/* =========================================================
+   AAH — biblioteca.css
+   Exclusivo de biblioteca.html. Requiere global.css cargado antes.
+   ========================================================= */
+
+.catalogo-section { padding-top: 3rem; }
+
+.catalogo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.issue-row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 1.75rem;
+  transition: box-shadow var(--transition);
+}
+.issue-row:hover { box-shadow: var(--shadow-card-hover); }
+
+.issue-cover {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(10,44,66,.15);
+  flex-shrink: 0;
+}
+.issue-cover img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+
+.issue-date {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  background: #eafaf3;
+  padding: .25rem .7rem;
+  border-radius: 999px;
+  margin-bottom: .6rem;
+}
+.issue-info h2 { font-size: 1.25rem; margin-bottom: 1rem; }
+
+.issue-index {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  columns: 2;
+  column-gap: 2rem;
+}
+.issue-index li {
+  font-size: .88rem;
+  color: var(--color-text-muted);
+  padding-left: 1rem;
+  position: relative;
+  margin-bottom: .55rem;
+  break-inside: avoid;
+  line-height: 1.4;
+}
+.issue-index li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .55em;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--color-hydrogen);
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 780px) {
+  .issue-row { grid-template-columns: 110px 1fr; gap: 1.25rem; padding: 1.25rem; }
+  .issue-index { columns: 1; }
+}
+
+@media (max-width: 560px) {
+  .issue-row { grid-template-columns: 1fr; }
+  .issue-cover { max-width: 130px; }
+}

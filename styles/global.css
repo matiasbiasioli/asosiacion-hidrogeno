@@ -224,7 +224,7 @@ button { font-family: inherit; cursor: pointer; }
   color: var(--color-accent-dark);
   margin-bottom: .6rem;
 }
-.page-hero h1 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); max-width: 22ch; }
+.page-hero h1 { font-size: clamp(1.8rem, 3.4vw, 2.4rem); max-width: 44ch; }
 .page-hero .section-lead { margin-top: .75rem; }
 
 /* =========================================================
@@ -242,6 +242,33 @@ button { font-family: inherit; cursor: pointer; }
 }
 .cards-grid.three { grid-template-columns: repeat(3, 1fr); }
 .cards-grid.two { grid-template-columns: repeat(2, 1fr); }
+
+/* =========================================================
+   Artículo destacado — usado por El Hidrógeno y Biblioteca
+   ========================================================= */
+.article-highlight-section { padding-top: 0; }
+.article-highlight {
+  display: flex;
+  gap: 1.75rem;
+  align-items: flex-start;
+  background: var(--color-primary-dark);
+  color: #cfe6f2;
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+}
+.article-highlight-icon {
+  flex-shrink: 0;
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.1);
+  border-radius: var(--radius-sm);
+  font-size: 1.6rem;
+}
+.article-highlight .eyebrow { color: var(--color-hydrogen); }
+.article-highlight h3 { color: #fff; font-size: 1.2rem; margin-top: .3rem; max-width: 60ch; }
+.article-highlight p { color: #a9c8d8; margin-top: .5rem; }
+.article-highlight .btn-outline { border-color: var(--color-hydrogen); color: var(--color-hydrogen); margin-top: 1rem; }
+.article-highlight .btn-outline:hover { background: var(--color-hydrogen); color: var(--color-primary-dark); }
 
 /* =========================================================
    Footer
@@ -319,4 +346,8 @@ button { font-family: inherit; cursor: pointer; }
   .nav-cta { margin-top: 1.5rem; }
   .cards-grid.three { grid-template-columns: 1fr; }
   .cards-grid.two { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .article-highlight { flex-direction: column; }
 }

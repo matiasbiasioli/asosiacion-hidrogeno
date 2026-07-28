@@ -38,9 +38,9 @@
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="institucional.html">Institucional</a></li>
-          <li><a href="#objetivos.html">Objetivos</a></li>
-          <li><a href="#el-hidrogeno.html">El Hidrógeno</a></li>
-          <li><a href="revista.html">Revista Hidrógeno</a></li>
+          <li><a href="objetivos.html">Objetivos</a></li>
+          <li><a href="el-hidrogeno.html">El Hidrógeno</a></li>
+          <li><a href="biblioteca.html">Biblioteca</a></li>
           <li><a href="normativa.html">Normativa y Legislación</a></li>
           <li><a href="galeria.html">Galería</a></li>
         </ul>
@@ -53,7 +53,14 @@
 
     <!-- ===================== HERO ===================== -->
     <section class="hero">
-      <div class="container hero-grid">
+      <div class="hero-slider" id="hero-slider">
+        <div class="hero-slide is-active" style="background-image:url('assets/img/hero-1.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('assets/img/hero-2.jpg')"></div>
+        <div class="hero-slide" style="background-image:url('assets/img/hero-3.jpg')"></div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-content">
         <div class="hero-copy">
           <h1>Liderando la Transición Energética en Argentina</h1>
           <p class="hero-lead">El hidrógeno verde: el vector sustentable del futuro.</p>
@@ -65,75 +72,15 @@
           </p>
           <div class="hero-actions">
             <a href="institucional.html" class="btn btn-primary">Descubrí la AAH</a>
-            <a href="revista.html" class="btn btn-ghost">Ver Revista Hidrógeno</a>
+            <a href="biblioteca.html" class="btn btn-ghost btn-ghost-light">Ver Biblioteca</a>
           </div>
         </div>
+      </div>
 
-        <div class="hero-visual" aria-hidden="true">
-          <svg viewBox="0 0 480 420" class="h2-diagram" role="img" aria-label="Diagrama: energías renovables convergen en hidrógeno y se distribuyen como combustible, electricidad y calor">
-            <!-- fuentes renovables -->
-            <g class="source" id="src-sun">
-              <circle cx="90" cy="70" r="26" fill="#ffb703"/>
-              <g stroke="#ffb703" stroke-width="3" stroke-linecap="round">
-                <line x1="90" y1="24" x2="90" y2="10"/>
-                <line x1="90" y1="130" x2="90" y2="116"/>
-                <line x1="44" y1="70" x2="30" y2="70"/>
-                <line x1="150" y1="70" x2="136" y2="70"/>
-                <line x1="55" y1="35" x2="45" y2="25"/>
-                <line x1="125" y1="35" x2="135" y2="25"/>
-              </g>
-            </g>
-
-            <g class="source" id="src-wind">
-              <line x1="240" y1="40" x2="240" y2="110" stroke="#0a5c8a" stroke-width="4" stroke-linecap="round"/>
-              <g id="turbine-blades" transform="translate(240,40)">
-                <path d="M0,0 L-4,-34 A6,6 0 0 1 6,-34 Z" fill="#4fc3f0"/>
-                <path d="M0,0 L28,18 A6,6 0 0 1 22,27 Z" fill="#4fc3f0"/>
-                <path d="M0,0 L-28,18 A6,6 0 0 1 -22,27 Z" fill="#4fc3f0"/>
-              </g>
-            </g>
-
-            <g class="source" id="src-water">
-              <path d="M390,40 C400,60 415,72 415,90 a25,25 0 1,1 -50,0 c0,-18 15,-30 25,-50 Z" fill="#4fc3f0"/>
-            </g>
-
-            <!-- líneas de convergencia -->
-            <g stroke="#c8d8e0" stroke-width="2" fill="none" class="convergence-lines">
-              <path d="M90,130 C90,190 190,190 240,220"/>
-              <path d="M240,110 C240,170 240,180 240,220"/>
-              <path d="M400,110 C400,190 290,190 240,220"/>
-            </g>
-
-            <!-- molécula H2 central -->
-            <g id="h2-molecule">
-              <circle cx="210" cy="240" r="20" fill="#0a5c8a"/>
-              <text x="210" y="246" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16">H</text>
-              <circle cx="270" cy="240" r="20" fill="#0a5c8a"/>
-              <text x="270" y="246" text-anchor="middle" fill="#fff" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="16">H</text>
-              <line x1="230" y1="240" x2="250" y2="240" stroke="#0a5c8a" stroke-width="4"/>
-            </g>
-
-            <!-- distribución -->
-            <g stroke="#c8d8e0" stroke-width="2" fill="none">
-              <path d="M240,260 C240,300 140,300 110,340"/>
-              <path d="M240,260 C240,310 240,320 240,360"/>
-              <path d="M240,260 C240,300 340,300 370,340"/>
-            </g>
-
-            <g class="end-use">
-              <rect x="70" y="340" width="80" height="46" rx="8" fill="#17a673"/>
-              <text x="110" y="368" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-weight="600" font-size="12">Combustible</text>
-            </g>
-            <g class="end-use">
-              <rect x="200" y="360" width="80" height="46" rx="8" fill="#17a673"/>
-              <text x="240" y="388" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-weight="600" font-size="12">Electricidad</text>
-            </g>
-            <g class="end-use">
-              <rect x="330" y="340" width="80" height="46" rx="8" fill="#17a673"/>
-              <text x="370" y="368" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-weight="600" font-size="12">Calor</text>
-            </g>
-          </svg>
-        </div>
+      <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Selector de imagen del slider">
+        <button class="hero-dot is-active" type="button" role="tab" aria-selected="true" aria-label="Imagen 1"></button>
+        <button class="hero-dot" type="button" role="tab" aria-selected="false" aria-label="Imagen 2"></button>
+        <button class="hero-dot" type="button" role="tab" aria-selected="false" aria-label="Imagen 3"></button>
       </div>
     </section>
 
@@ -208,7 +155,7 @@
           <article class="obj-card reveal-target">
             <span class="obj-number">02</span>
             <h3>Vinculación sectorial</h3>
-            <p>Promover la coordinación entre gobierno, industrias, instituciones y universidades.</p>
+            <p>Promover la coordinación entre gobierno, industrias, instituciones de I+D y universidades.</p>
           </article>
           <article class="obj-card reveal-target">
             <span class="obj-number">03</span>
@@ -217,7 +164,7 @@
           </article>
         </div>
 
-        <a href="#objetivos.html" class="btn btn-outline objetivos-cta">Ver los 11 objetivos completos</a>
+        <a href="objetivos.html" class="btn btn-outline objetivos-cta">Ver los 11 objetivos completos</a>
       </div>
     </section>
 
@@ -229,12 +176,9 @@
         <div class="cards-grid three">
           <article class="destacado-card reveal-target">
             <div class="destacado-icon revista" aria-hidden="true">H2</div>
-            <h3>Revista Hidrógeno</h3>
-            <p>La primera publicación en español dedicada al hidrógeno y sus tecnologías, editada desde 1998.</p>
-            <button class="btn btn-primary btn-download" data-pdf="revista-hidrogeno-ultima-edicion.pdf">
-              Descargar edición
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v8m0 0l-3-3m3 3l3-3M3 13h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
+            <h3>Biblioteca</h3>
+            <p>Todas las ediciones de la Revista Hidrógeno, la primera publicación en español dedicada al hidrógeno, editada desde 1998.</p>
+            <a href="biblioteca.html" class="btn btn-outline">Ver biblioteca completa</a>
           </article>
 
           <article class="destacado-card reveal-target">
@@ -317,8 +261,8 @@
 
       <nav class="footer-nav" aria-label="Enlaces del pie de página">
         <a href="institucional.html">Institucional</a>
-        <a href="#objetivos.html">Objetivos</a>
-        <a href="revista.html">Revista</a>
+        <a href="objetivos.html">Objetivos</a>
+        <a href="biblioteca.html">Biblioteca</a>
         <a href="normativa.html">Normativa y Legislación</a>
         <a href="contacto.html">Contacto</a>
       </nav>

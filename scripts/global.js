@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeaderScroll();
   initMobileNav();
   initScrollReveal();
+  initPdfDownloads();
 });
 
 /* -----------------------------------------------------------
@@ -85,4 +86,60 @@ function initScrollReveal() {
   );
 
   targets.forEach((el) => observer.observe(el));
+}
+
+/* -----------------------------------------------------------
+   Descarga de PDFs (Biblioteca, Normativa, etc.)
+   -----------------------------------------------------------
+   Los botones con [data-pdf] apuntan a un archivo dentro de /assets/pdf/.
+   Si el archivo todavía no existe (placeholder), avisamos al usuario
+   en vez de romper la navegación con un 404 silencioso.
+   Cuando el cliente entregue los PDFs reales, alcanza con colocarlos
+   en /assets/pdf/ con el mismo nombre — no hace falta tocar el HTML.
+----------------------------------------------------------- */
+function initPdfDownloads() {
+  const PDF_BASE_PATH = 'assets/pdf/';
+
+  document.querySelectorAll('[data-pdf]').forEach((button) => {
+    button.addEventListener('click', async () => {
+      const fileName = button.getAttribute('data-pdf');
+      const url = PDF_BASE_PATH + fileName;
+      const originalLabel = button.innerHTML;
+
+      button.disabled = true;
+      button.textContent = 'Verificando…';
+
+      const exists = await fileExists(url);
+
+      if (exists) {
+        triggerDownload(url, fileName);
+        button.innerHTML = originalLabel;
+      } else {
+        button.textContent = 'PDF disponible próximamente';
+        setTimeout(() => {
+          button.innerHTML = originalLabel;
+        }, 2600);
+      }
+
+      button.disabled = false;
+    });
+  });
+}
+
+async function fileExists(url) {
+  try {
+    const res = await fetch(url, { method: 'HEAD' });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+function triggerDownload(url, fileName) {
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
 }

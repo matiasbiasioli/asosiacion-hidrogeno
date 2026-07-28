@@ -2,71 +2,67 @@
 
 /**
  * AAH — home.js
- * Exclusivo de index.html. Requiere global.js cargado antes
- * (usa el mismo DOMContentLoaded, así que el orden en el
- * <script> no afecta, pero global.js debe ir primero igual
- * por prolijidad y por si algún día comparten una función).
+ * Exclusivo de index.html: slider del hero + formulario de contacto.
+ * La descarga de PDFs vive en global.js (la usan varias páginas).
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initPdfDownloads();
+  initHeroSlider();
   initContactForm();
 });
 
 /* -----------------------------------------------------------
-   Descarga de PDFs (Revista / Normativa)
+   Slider de imágenes del hero
    -----------------------------------------------------------
-   Los botones con [data-pdf] apuntan a un archivo dentro de /assets/pdf/.
-   Si el archivo todavía no existe (placeholder), avisamos al usuario
-   en vez de romper la navegación con un 404 silencioso.
-   Cuando el cliente entregue los PDFs reales, alcanza con colocarlos
-   en /assets/pdf/ con el mismo nombre — no hace falta tocar el HTML.
+   Crossfade automático cada 6s + navegación manual por los
+   puntos. Las imágenes son PLACEHOLDERS generados — reemplazar
+   los archivos en assets/img/hero-1.jpg, hero-2.jpg y hero-3.jpg
+   por las fotos reales del cliente (mismo nombre, sin tocar
+   este archivo ni el HTML).
 ----------------------------------------------------------- */
-function initPdfDownloads() {
-  const PDF_BASE_PATH = 'assets/pdf/';
+function initHeroSlider() {
+  const slider = document.getElementById('hero-slider');
+  const dotsWrap = document.getElementById('hero-dots');
+  if (!slider || !dotsWrap) return;
 
-  document.querySelectorAll('[data-pdf]').forEach((button) => {
-    button.addEventListener('click', async () => {
-      const fileName = button.getAttribute('data-pdf');
-      const url = PDF_BASE_PATH + fileName;
-      const originalLabel = button.innerHTML;
+  const slides = Array.from(slider.querySelectorAll('.hero-slide'));
+  const dots = Array.from(dotsWrap.querySelectorAll('.hero-dot'));
+  if (slides.length < 2) return;
 
-      button.disabled = true;
-      button.textContent = 'Verificando…';
+  let current = 0;
+  const AUTOPLAY_MS = 6000;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      const exists = await fileExists(url);
+  function goTo(index) {
+    slides[current].classList.remove('is-active');
+    dots[current].classList.remove('is-active');
+    dots[current].setAttribute('aria-selected', 'false');
 
-      if (exists) {
-        triggerDownload(url, fileName);
-        button.innerHTML = originalLabel;
-      } else {
-        button.textContent = 'PDF disponible próximamente';
-        setTimeout(() => {
-          button.innerHTML = originalLabel;
-        }, 2600);
-      }
+    current = (index + slides.length) % slides.length;
 
-      button.disabled = false;
+    slides[current].classList.add('is-active');
+    dots[current].classList.add('is-active');
+    dots[current].setAttribute('aria-selected', 'true');
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      goTo(i);
+      resetAutoplay();
     });
   });
-}
 
-async function fileExists(url) {
-  try {
-    const res = await fetch(url, { method: 'HEAD' });
-    return res.ok;
-  } catch {
-    return false;
+  let timer;
+  function startAutoplay() {
+    if (prefersReducedMotion) return; // no autoplay si el usuario prefiere menos movimiento
+    timer = setInterval(() => goTo(current + 1), AUTOPLAY_MS);
   }
-}
+  function resetAutoplay() {
+    clearInterval(timer);
+    startAutoplay();
+  }
 
-function triggerDownload(url, fileName) {
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = fileName;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
+  startAutoplay();
 }
 
 /* -----------------------------------------------------------

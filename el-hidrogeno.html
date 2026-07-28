@@ -1,300 +1,558 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>El Hidrógeno | Asociación Argentina del Hidrógeno</title>
-  <meta name="description" content="Qué es el hidrógeno, sus isótopos, aspectos de seguridad, ventajas ecológicas y aplicaciones como combustible limpio.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>El Hidrógeno | Asociación Argentina del Hidrógeno</title>
+    <meta
+      name="description"
+      content="Qué es el hidrógeno, sus isótopos, aspectos de seguridad, ventajas ecológicas y aplicaciones como combustible limpio."
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="styles/global.css">
-  <link rel="stylesheet" href="styles/el-hidrogeno.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/el-hidrogeno.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido principal</a>
 
-  <a class="skip-link" href="#main">Saltar al contenido principal</a>
-
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header" id="site-header">
-    <div class="header-top">
-      <div class="container header-top-inner">
-        <p class="founding-note">Fundada en Buenos Aires el 7 de junio de 1996 · Más de 30 años impulsando las tecnologías del hidrógeno</p>
-      </div>
-    </div>
-
-    <div class="container header-main">
-      <a href="index.html" class="brand" aria-label="AAH - Ir al inicio">
-        <img src="assets/img/logo.png" alt="Asociación Argentina del Hidrógeno" class="brand-logo">
-      </a>
-
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú de navegación">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="institucional.html">Institucional</a></li>
-          <li><a href="#objetivos.html">Objetivos</a></li>
-          <li><a href="#el-hidrogeno.html" aria-current="page">El Hidrógeno</a></li>
-          <li><a href="revista.html">Revista Hidrógeno</a></li>
-          <li><a href="normativa.html">Normativa y Legislación</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-        </ul>
-        <a href="contacto.html" class="btn btn-outline nav-cta">Contacto</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-
-    <!-- ===================== PAGE HERO ===================== -->
-    <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow">El Hidrógeno</span>
-        <h1>¿Qué es el hidrógeno?</h1>
-        <p class="section-lead">
-          Es un elemento químico, símbolo H. Su nombre proviene del griego <em>hydor</em> (agua) y
-          <em>gennân</em> (engendrar): "generador de agua". Es un gas inodoro, incoloro e insípido,
-          formado por moléculas diatómicas — el elemento más simple y abundante de todo el universo.
-        </p>
-      </div>
-    </section>
-
-    <!-- ===================== NAV DE ANCLAS ===================== -->
-    <nav class="index-pills-wrap" aria-label="Navegación de la página">
-      <div class="container index-pills">
-        <a href="#dato-abundancia">El elemento</a>
-        <a href="#historia">Historia</a>
-        <a href="#isotopos">Isótopos</a>
-        <a href="#seguridad">Seguridad</a>
-        <a href="#ventajas">Ventajas ecológicas</a>
-        <a href="#aplicaciones">Aplicaciones</a>
-      </div>
-    </nav>
-
-    <!-- ===================== DATOS CLAVE ===================== -->
-    <section class="section fact-section" id="dato-abundancia">
-      <div class="container">
-        <div class="fact-strip">
-          <article class="fact-card reveal-target">
-            <span class="fact-number">&gt;70%</span>
-            <span class="fact-label">del peso del universo — el elemento más abundante que existe</span>
-          </article>
-          <article class="fact-card reveal-target">
-            <span class="fact-number">11%</span>
-            <span class="fact-label">en peso del agua, su compuesto más abundante en la Tierra</span>
-          </article>
-          <article class="fact-card reveal-target">
-            <span class="fact-number">~10%</span>
-            <span class="fact-label">del peso del cuerpo humano está compuesto de hidrógeno</span>
-          </article>
-          <article class="fact-card reveal-target">
-            <span class="fact-number">1898</span>
-            <span class="fact-label">año en que James Dewar logró aislarlo por primera vez</span>
-          </article>
-        </div>
-
-        <p class="section-body">
-          Como hidrógeno libre se lo puede hallar en emisiones volcánicas —hasta 30% en volumen— y en
-          la estructura de ciertas rocas. Combinado, forma el agua, los ácidos e hidróxidos, el
-          petróleo y toda la materia orgánica: gas natural, carbón y toda forma de vida en la Tierra.
-        </p>
-      </div>
-    </section>
-
-    <!-- ===================== HISTORIA ===================== -->
-    <section class="section alt-bg" id="historia">
-      <div class="container">
-        <h2 class="section-title">Un poco de historia</h2>
-        <div class="timeline">
-          <div class="timeline-item reveal-target">
-            <span class="timeline-year">Siglo XVI</span>
-            <p>Se conocía que el aceite de vitriolo (ácido sulfúrico) sobre hierro desprendía un gas combustible, sin identificar aún el elemento.</p>
-          </div>
-          <div class="timeline-item reveal-target">
-            <span class="timeline-year">1766</span>
-            <p>Henry Cavendish estudia el "aire inflamable" y en 1781 demuestra que, junto al oxígeno, forma agua.</p>
-          </div>
-          <div class="timeline-item reveal-target">
-            <span class="timeline-year">1783</span>
-            <p>Antoine Lavoisier lo bautiza <em>hidrógeno</em>: "productor de agua", por esa misma propiedad.</p>
-          </div>
-          <div class="timeline-item reveal-target">
-            <span class="timeline-year">1898</span>
-            <p>James Dewar consigue aislarlo por primera vez en estado puro.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== ISÓTOPOS ===================== -->
-    <section class="section" id="isotopos">
-      <div class="container">
-        <h2 class="section-title">Isótopos del hidrógeno</h2>
-        <p class="section-lead">
-          Los isótopos de un elemento tienen igual número de protones y distinto número de neutrones.
-          El hidrógeno tiene tres:
-        </p>
-
-        <div class="cards-grid three">
-          <article class="isotope-card reveal-target">
-            <span class="isotope-symbol">H<sup>1</sup></span>
-            <h3>Protio</h3>
-            <p>La forma común del hidrógeno. Un solo protón, sin neutrones. Representa prácticamente la totalidad del hidrógeno natural.</p>
-          </article>
-          <article class="isotope-card reveal-target">
-            <span class="isotope-symbol">H<sup>2</sup></span>
-            <h3>Deuterio (D)</h3>
-            <p>Un protón y un neutrón. Se presenta en el hidrógeno natural en una proporción aproximada y casi constante de H¹/D = 6900:1.</p>
-          </article>
-          <article class="isotope-card reveal-target">
-            <span class="isotope-symbol">H<sup>3</sup></span>
-            <h3>Tritio (T)</h3>
-            <p>Un protón y dos neutrones. No se presenta en la naturaleza en cantidad apreciable: se forma por desintegración artificial del deuterio.</p>
-          </article>
-        </div>
-
-        <div class="info-note reveal-target">
-          <h3>Orto e para-hidrógeno</h3>
-          <p>
-            La molécula de H tiene dos protones cuyos spins pueden apuntar en el mismo sentido u
-            oponerse, dando lugar a dos variantes: <strong>orto-hidrógeno</strong> y
-            <strong>para-hidrógeno</strong>. El hidrógeno ordinario es una mezcla de tres partes de
-            orto por una de para. Enfriando y comprimiendo el gas —o absorbiéndolo sobre carbón a la
-            temperatura del hidrógeno líquido— se logra convertirlo casi por completo en para-hidrógeno,
-            que tiene puntos de congelación y ebullición más bajos y conduce mejor el calor. No existe,
-            en cambio, un método conocido para obtener orto-hidrógeno puro.
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header" id="site-header">
+      <div class="header-top">
+        <div class="container header-top-inner">
+          <p class="founding-note">
+            Fundada en Buenos Aires el 7 de junio de 1996 · Más de 30 años
+            impulsando las tecnologías del hidrógeno
           </p>
         </div>
       </div>
-    </section>
 
-    <!-- ===================== SEGURIDAD ===================== -->
-    <section class="section alt-bg" id="seguridad">
-      <div class="container">
-        <h2 class="section-title">Aspectos de seguridad</h2>
-        <p class="section-lead">
-          El H no tiene mucha más peligrosidad que el petróleo, el gas natural o la nafta. Con la
-          debida atención a sus propiedades y a las reglas de manejo seguro, no es particularmente
-          peligroso: la industria química lo usa desde hace cien años con experiencia positiva.
-        </p>
+      <div class="container header-main">
+        <a href="index.html" class="brand" aria-label="AAH - Ir al inicio">
+          <img
+            src="assets/img/logo.png"
+            alt="Asociación Argentina del Hidrógeno"
+            class="brand-logo"
+          />
+        </a>
 
-        <div class="safety-grid">
-          <div class="safety-item reveal-target"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No detona al aire libre</span></div>
-          <div class="safety-item reveal-target"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No se descompone</span></div>
-          <div class="safety-item reveal-target"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No entra en combustión espontánea</span></div>
-          <div class="safety-item reveal-target"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No oxida</span></div>
-          <div class="safety-item reveal-target"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No es tóxico (salvo impurezas)</span></div>
-          <div class="safety-item reveal-target"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No es corrosivo</span></div>
-          <div class="safety-item reveal-target"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No es radiactivo</span></div>
-          <div class="safety-item reveal-target"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No emana mal olor</span></div>
-          <div class="safety-item reveal-target"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No transmite enfermedades</span></div>
-          <div class="safety-item reveal-target"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No compromete el agua</span></div>
-          <div class="safety-item reveal-target"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No es teratogénico</span></div>
-          <div class="safety-item reveal-target"><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>No es cancerígeno</span></div>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Abrir menú de navegación"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav
+          class="primary-nav"
+          id="primary-nav"
+          aria-label="Navegación principal"
+        >
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="institucional.html">Institucional</a></li>
+            <li><a href="objetivos.html">Objetivos</a></li>
+            <li>
+              <a href="el-hidrogeno.html" aria-current="page">El Hidrógeno</a>
+            </li>
+            <li><a href="revista.html">Revista Hidrógeno</a></li>
+            <li><a href="normativa.html">Normativa y Legislación</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+          </ul>
+          <a href="contacto.html" class="btn btn-outline nav-cta">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ===================== PAGE HERO ===================== -->
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">El Hidrógeno</span>
+          <h1>¿Qué es el hidrógeno?</h1>
+          <p class="section-lead">
+            Es un elemento químico, símbolo H. Su nombre proviene del griego
+            <em>hydor</em> (agua) y <em>gennân</em> (engendrar): "generador de
+            agua". Es un gas inodoro, incoloro e insípido, formado por moléculas
+            diatómicas — el elemento más simple y abundante de todo el universo.
+          </p>
         </div>
+      </section>
 
-        <p class="section-body">
-          Su rasgo más relevante en materia de seguridad es la inflamabilidad: reacciona fácilmente
-          con el oxígeno y, al quemar, produce agua — precisamente lo que lo hace tan adecuado como
-          combustible limpio. En ambientes cerrados deben preverse buena ventilación y precauciones
-          adicionales.
-        </p>
-      </div>
-    </section>
-
-    <!-- ===================== VENTAJAS ECOLÓGICAS ===================== -->
-    <section class="section" id="ventajas">
-      <div class="container">
-        <h2 class="section-title">Ventajas ecológicas de su utilización</h2>
-
-        <ul class="advantage-list">
-          <li class="reveal-target">Al arder con el aire, en motores de combustión interna o turbinas de gas, solo produce emisiones despreciables de elementos indeseables.</li>
-          <li class="reveal-target">Las emisiones de NOx pueden controlarse mediante la selección de procesos de combustión apropiados, ya que crecen con la intensidad del calor.</li>
-          <li class="reveal-target">A diferencia de otros combustibles, permite mayor libertad en los procesos de combustión, reduciendo NOx frente al gas natural o el petróleo.</li>
-          <li class="reveal-target">En celdas de combustible (FC), por ejemplo de membrana de intercambio protónico (PEM), las emisiones indeseadas se evitan por completo: el único producto de la reacción es agua pura.</li>
-          <li class="reveal-target">Operado en FC a alta temperatura, genera emisiones cien veces menores que las centrales eléctricas convencionales.</li>
-          <li class="reveal-target">Funciona también como transportador secundario de energía (carrier), ofreciendo una alternativa flexible de acumulación de energías renovables.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ===================== APLICACIONES ===================== -->
-    <section class="section alt-bg" id="aplicaciones">
-      <div class="container">
-        <h2 class="section-title">Aplicaciones del hidrógeno</h2>
-
-        <div class="cards-grid two">
-          <article class="application-card reveal-target">
-            <div class="application-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M3 16h1.5l1-4h13l1 4H21M6 16v3a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h6v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-3M7 12l1.5-4.5A2 2 0 0 1 10.4 6h3.2a2 2 0 0 1 1.9 1.5L17 12" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="16" r="1.2" fill="currentColor"/><circle cx="16.5" cy="16" r="1.2" fill="currentColor"/></svg>
-            </div>
-            <h3>Motores de vehículos</h3>
-            <p>Automóviles, camiones, ómnibus, motoelevadores, locomotoras, y motores de aviones y buques. Ya existen compañías de nivel mundial que producen motores alternativos diseñados específicamente para hidrógeno.</p>
-          </article>
-
-          <article class="application-card reveal-target">
-            <div class="application-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Generación eléctrica estacionaria</h3>
-            <p>En lugares aislados o centros urbanos, como generación propia o cogeneración, cuando se busca prescindir de la red eléctrica por seguridad o calidad de servicio. Los generadores más modernos son celdas de combustible (FC) o motores de combustión interna adaptados.</p>
-          </article>
+      <!-- ===================== NAV DE ANCLAS ===================== -->
+      <nav class="index-pills-wrap" aria-label="Navegación de la página">
+        <div class="container index-pills">
+          <a href="#dato-abundancia">El elemento</a>
+          <a href="#historia">Historia</a>
+          <a href="#isotopos">Isótopos</a>
+          <a href="#seguridad">Seguridad</a>
+          <a href="#ventajas">Ventajas ecológicas</a>
+          <a href="#aplicaciones">Aplicaciones</a>
         </div>
-      </div>
-    </section>
-
-    <!-- ===================== ARTÍCULO DESTACADO ===================== -->
-    <section class="section article-highlight-section">
-      <div class="container">
-        <article class="article-highlight reveal-target">
-          <div class="article-highlight-icon" aria-hidden="true">📄</div>
-          <div>
-            <span class="eyebrow">Publicación científica</span>
-            <h3>The energy transition towards hydrogen utilization for green life and sustainable human development in Patagonia</h3>
-            <p>Artículo de acceso abierto publicado en ScienceDirect / International Journal of Hydrogen Energy.</p>
-            <a href="https://www.sciencedirect.com/science/article/pii/S0360319920304717?dgcid=author" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-              Leer artículo completo
-            </a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <strong>AAH</strong>
-        <p>Asociación Argentina del Hidrógeno</p>
-      </div>
-
-      <nav class="footer-nav" aria-label="Enlaces del pie de página">
-        <a href="institucional.html">Institucional</a>
-        <a href="#objetivos.html">Objetivos</a>
-        <a href="revista.html">Revista</a>
-        <a href="normativa.html">Normativa y Legislación</a>
-        <a href="contacto.html">Contacto</a>
       </nav>
 
-      <div class="footer-social" aria-label="Redes sociales">
-        <a href="#" aria-label="LinkedIn">in</a>
-        <a href="#" aria-label="Twitter">X</a>
-        <a href="#" aria-label="YouTube">▶</a>
-      </div>
-    </div>
-    <div class="footer-bottom container">
-      <p>© 2026 Asociación Argentina del Hidrógeno. Todos los derechos reservados.</p>
-      <p><a href="#">Privacidad</a> · <a href="#">Mapa del sitio</a></p>
-    </div>
-  </footer>
+      <!-- ===================== DATOS CLAVE ===================== -->
+      <section class="section fact-section" id="dato-abundancia">
+        <div class="container">
+          <div class="fact-strip">
+            <article class="fact-card reveal-target">
+              <span class="fact-number">+70%</span>
+              <span class="fact-label"
+                >del peso del universo — el elemento más abundante que
+                existe</span
+              >
+            </article>
+            <article class="fact-card reveal-target">
+              <span class="fact-number">11%</span>
+              <span class="fact-label"
+                >en peso del agua, su compuesto más abundante en la Tierra</span
+              >
+            </article>
+            <article class="fact-card reveal-target">
+              <span class="fact-number">10%</span>
+              <span class="fact-label"
+                >cuerpo humano está compuesto de hidrógeno</span
+              >
+            </article>
+            <article class="fact-card reveal-target">
+              <span class="fact-number">1898</span>
+              <span class="fact-label"
+                >año en que James Dewar logró aislarlo por primera vez</span
+              >
+            </article>
+          </div>
 
-  <script src="scripts/global.js"></script>
-</body>
+          <p class="section-body">
+            Como hidrógeno libre se lo puede hallar en las emisiones volcánicas,
+            ya que en los gases volcánicos se encuentra hasta 30% en volumen y
+            en la estructura de ciertas rocas, pero como elemento químicamente
+            combinado se halla presente en el agua y en toda materia orgánica,
+            en el gas natural, el petróleo y el carbón.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== HISTORIA ===================== -->
+      <section class="section alt-bg" id="historia">
+        <div class="container">
+          <h2 class="section-title">Un poco de historia</h2>
+          <div class="timeline">
+            <div class="timeline-item reveal-target">
+              <span class="timeline-year">Siglo XVI</span>
+              <p>
+                Se conocía que el aceite de vitriolo (ácido sulfúrico) sobre
+                hierro desprendía un gas combustible, sin identificar aún el
+                elemento.
+              </p>
+            </div>
+            <div class="timeline-item reveal-target">
+              <span class="timeline-year">1766</span>
+              <p>
+                Henry Cavendish estudia el "aire inflamable" y en 1781 demuestra
+                que, junto al oxígeno, forma agua.
+              </p>
+            </div>
+            <div class="timeline-item reveal-target">
+              <span class="timeline-year">1783</span>
+              <p>
+                Antoine Lavoisier lo bautiza <em>hidrógeno</em>: "productor de
+                agua", por esa misma propiedad.
+              </p>
+            </div>
+            <div class="timeline-item reveal-target">
+              <span class="timeline-year">1898</span>
+              <p>
+                James Dewar consigue aislarlo por primera vez en estado puro.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ISÓTOPOS ===================== -->
+      <section class="section" id="isotopos">
+        <div class="container">
+          <h2 class="section-title">Isótopos del hidrógeno</h2>
+          <p class="section-lead">
+            Los isótopos de un elemento tienen igual número de protones y
+            distinto número de neutrones. El hidrógeno tiene tres:
+          </p>
+
+          <div class="cards-grid three">
+            <article class="isotope-card reveal-target">
+              <span class="isotope-symbol">H<sup>1</sup></span>
+              <h3>Protio</h3>
+              <p>
+                La forma común del hidrógeno. Un solo protón, sin neutrones.
+                Representa prácticamente la totalidad del hidrógeno natural.
+              </p>
+            </article>
+            <article class="isotope-card reveal-target">
+              <span class="isotope-symbol">H<sup>2</sup></span>
+              <h3>Deuterio (D)</h3>
+              <p>
+                Un protón y un neutrón. Se presenta en el hidrógeno natural en
+                una proporción aproximada y casi constante de H¹/D = 6900:1.
+              </p>
+            </article>
+            <article class="isotope-card reveal-target">
+              <span class="isotope-symbol">H<sup>3</sup></span>
+              <h3>Tritio (T)</h3>
+              <p>
+                Un protón y dos neutrones. No se presenta en la naturaleza en
+                cantidad apreciable: se forma por desintegración artificial del
+                deuterio.
+              </p>
+            </article>
+          </div>
+
+          <div class="info-note reveal-target">
+            <h3>Orto y para-hidrógeno</h3>
+            <p>
+              La molécula de H consta de dos protones y dos electrones. Los
+              protones pueden tener sus spins en el mismo sentido o en sentido
+              opuesto, resultando dos clases diferentes de moléculas de H,
+              llamadas orto-hidrógeno y para-hidrógeno, respectivamente. En 1929
+              Bonhoffer y Hacker encontraron que si se enfría y comprime el
+              hidrógeno ordinario, se produce la conversión del orto-hidrógeno
+              en para-hidrógeno. Absorbiendo hidrógeno ordinario sobre carbón a
+              la temperatura del hidrógeno líquido se produce una conversión
+              catalítica prácticamente completa en para-hidrógeno que puede ser
+              extraído como gas mediante una bomba.No existe ningún método
+              conocido para obtener orto-hidrógeno puro. El hidrógeno ordinario
+              es la mezcla más rica, tres partes de orto y una parte de
+              para-hidrógeno. El para-hidrógeno tiene los puntos de congelación
+              y ebullición ligeramente más bajos y es mucho mejor conductor del
+              calor que el orto-hidrógeno, o que el hidrógeno ordinario.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SEGURIDAD ===================== -->
+      <section class="section alt-bg" id="seguridad">
+        <div class="container">
+          <h2 class="section-title">Aspectos de seguridad</h2>
+          <p class="section-lead">
+            El H no tiene mucha más peligrosidad que el petróleo, el gas natural
+            o la nafta. Con la debida atención a sus propiedades y a las reglas
+            de manejo seguro, no es particularmente peligroso: la industria
+            química lo usa desde hace cien años con experiencia positiva.
+          </p>
+
+          <div class="safety-grid">
+            <div class="safety-item reveal-target">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M4 10.5l4 4 8-9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>No detona al aire libre</span>
+            </div>
+            <div class="safety-item reveal-target">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M4 10.5l4 4 8-9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>No se descompone</span>
+            </div>
+            <div class="safety-item reveal-target">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M4 10.5l4 4 8-9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>No entra en combustión espontánea</span>
+            </div>
+            <div class="safety-item reveal-target">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M4 10.5l4 4 8-9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>No oxida</span>
+            </div>
+            <div class="safety-item reveal-target">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M4 10.5l4 4 8-9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>No es tóxico (salvo impurezas)</span>
+            </div>
+            <div class="safety-item reveal-target">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M4 10.5l4 4 8-9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>No es corrosivo</span>
+            </div>
+            <div class="safety-item reveal-target">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M4 10.5l4 4 8-9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>No es radiactivo</span>
+            </div>
+            <div class="safety-item reveal-target">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M4 10.5l4 4 8-9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>No emana mal olor</span>
+            </div>
+            <div class="safety-item reveal-target">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M4 10.5l4 4 8-9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>No transmite enfermedades</span>
+            </div>
+            <div class="safety-item reveal-target">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M4 10.5l4 4 8-9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>No compromete el agua</span>
+            </div>
+            <div class="safety-item reveal-target">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M4 10.5l4 4 8-9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>No es teratogénico</span>
+            </div>
+            <div class="safety-item reveal-target">
+              <svg viewBox="0 0 20 20">
+                <path
+                  d="M4 10.5l4 4 8-9"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+              ><span>No es cancerígeno</span>
+            </div>
+          </div>
+
+          <p class="section-body">
+            Su rasgo más relevante en materia de seguridad es la inflamabilidad:
+            reacciona fácilmente con el oxígeno y, al quemar, produce agua —
+            precisamente lo que lo hace tan adecuado como combustible limpio. En
+            ambientes cerrados deben preverse buena ventilación y precauciones
+            adicionales.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== VENTAJAS ECOLÓGICAS ===================== -->
+      <section class="section" id="ventajas">
+        <div class="container">
+          <h2 class="section-title">Ventajas ecológicas de su utilización</h2>
+
+          <ul class="advantage-list">
+            <li class="reveal-target">
+              Cuando el H arde con el aire en motores de combustión interna como en turbinas de gas sólo se producen escasas emisiones despreciables de elementos indeseables.
+            </li>
+            <li class="reveal-target">
+              Las emisiones de monóxido de nitrógeno (NOx) se incrementan exponencialmente con la intensidad del calor. Por lo tanto, esas emisiones indeseadas pueden ser controladas por medio de la selección de procesos de combustión apropiados.
+            </li>
+            <li class="reveal-target">
+              A diferencia de otros combustibles, permite mayor libertad en los
+              procesos de combustión, reduciendo NOx frente al gas natural o el
+              petróleo.
+            </li>
+            <li class="reveal-target">
+              En celdas de combustible (FC), por ejemplo de membrana de
+              intercambio protónico (PEM), las emisiones indeseadas se evitan
+              por completo: el único producto de la reacción es agua pura.
+            </li>
+            <li class="reveal-target">
+              Operado en FC a alta temperatura, genera emisiones cien veces
+              menores que las centrales eléctricas convencionales.
+            </li>
+            <li class="reveal-target">
+              Funciona también como transportador secundario de energía
+              (carrier), ofreciendo una alternativa flexible de acumulación de
+              energías renovables.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===================== APLICACIONES ===================== -->
+      <section class="section alt-bg" id="aplicaciones">
+        <div class="container">
+          <h2 class="section-title">Aplicaciones del hidrógeno</h2>
+
+          <div class="cards-grid two">
+            <article class="application-card reveal-target">
+              <div class="application-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M3 16h1.5l1-4h13l1 4H21M6 16v3a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h6v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-3M7 12l1.5-4.5A2 2 0 0 1 10.4 6h3.2a2 2 0 0 1 1.9 1.5L17 12"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                  <circle cx="7.5" cy="16" r="1.2" fill="currentColor" />
+                  <circle cx="16.5" cy="16" r="1.2" fill="currentColor" />
+                </svg>
+              </div>
+              <h3>Motores de vehículos</h3>
+              <p>
+                Automóviles, camiones, ómnibus, motoelevadores, locomotoras, y
+                motores de aviones y buques. Ya existen compañías de nivel
+                mundial que producen motores alternativos diseñados
+                específicamente para hidrógeno.
+              </p>
+            </article>
+
+            <article class="application-card reveal-target">
+              <div class="application-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3>Generación eléctrica estacionaria</h3>
+              <p>
+                En lugares aislados o centros urbanos, como generación propia o
+                cogeneración, cuando se busca prescindir de la red eléctrica por
+                seguridad o calidad de servicio. Los generadores más modernos
+                son celdas de combustible (FC) o motores de combustión interna
+                adaptados.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ARTÍCULO DESTACADO ===================== -->
+      <section class="section article-highlight-section">
+        <div class="container">
+          <article class="article-highlight reveal-target">
+            <div class="article-highlight-icon" aria-hidden="true">📄</div>
+            <div>
+              <span class="eyebrow">Publicación científica</span>
+              <h3>
+                The energy transition towards hydrogen utilization for green
+                life and sustainable human development in Patagonia
+              </h3>
+              <p>
+                Artículo de acceso abierto publicado en ScienceDirect /
+                International Journal of Hydrogen Energy.
+              </p>
+              <a
+                href="https://www.sciencedirect.com/science/article/pii/S0360319920304717?dgcid=author"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-outline"
+              >
+                Leer artículo completo
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <strong>AAH</strong>
+          <p>Asociación Argentina del Hidrógeno</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Enlaces del pie de página">
+          <a href="institucional.html">Institucional</a>
+          <a href="objetivos.html">Objetivos</a>
+          <a href="revista.html">Revista</a>
+          <a href="normativa.html">Normativa y Legislación</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="footer-social" aria-label="Redes sociales">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>
+          © 2026 Asociación Argentina del Hidrógeno. Todos los derechos
+          reservados.
+        </p>
+        <p><a href="#">Privacidad</a> · <a href="#">Mapa del sitio</a></p>
+      </div>
+    </footer>
+
+    <script src="scripts/global.js"></script>
+  </body>
 </html>

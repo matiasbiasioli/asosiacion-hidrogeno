@@ -4,42 +4,85 @@
    ========================================================= */
 
 /* =========================================================
-   Hero
+   Hero — slider de imágenes con texto superpuesto
    ========================================================= */
-.hero { padding-block: 3.5rem 4rem; overflow: hidden; }
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 3rem;
+.hero {
+  position: relative;
+  min-height: 620px;
+  display: flex;
   align-items: center;
+  overflow: hidden;
+  color: #fff;
 }
+
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.hero-slide.is-active { opacity: 1; }
+
+.hero-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(7,42,64,.88) 0%, rgba(7,42,64,.62) 45%, rgba(7,42,64,.25) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding-block: 4rem;
+  padding-left: clamp(1.5rem, 7vw, 7rem);
+  padding-right: 1.5rem;
+}
+.hero-copy { max-width: 620px; }
 .hero h1 {
   font-size: clamp(2rem, 4vw, 2.85rem);
   margin-bottom: .4em;
+  color: #fff;
 }
 .hero-lead {
   font-family: var(--font-display);
   font-weight: 600;
-  color: var(--color-accent-dark);
+  color: var(--color-hydrogen);
   font-size: 1.15rem;
 }
-.hero-text { max-width: 46ch; }
+.hero-text { max-width: 50ch; color: #dcebf2; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+.btn-ghost-light { color: #fff; }
+.btn-ghost-light:hover { color: var(--color-hydrogen); }
 
-.hero-visual { display: flex; justify-content: center; }
-.h2-diagram { width: 100%; max-width: 440px; }
-
-#turbine-blades { transform-origin: 240px 40px; animation: spin-blades 6s linear infinite; }
-@keyframes spin-blades { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-
-#h2-molecule circle { animation: pulse 3s ease-in-out infinite; transform-origin: center; }
-#h2-molecule circle:nth-child(4) { animation-delay: .3s; }
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.06); }
+.hero-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 1.75rem;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  gap: .6rem;
 }
-.convergence-lines path { stroke-dasharray: 6 6; animation: dash 2.4s linear infinite; }
-@keyframes dash { to { stroke-dashoffset: -24; } }
+.hero-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,.7);
+  background: transparent;
+  padding: 0;
+  transition: background var(--transition), transform var(--transition);
+}
+.hero-dot.is-active { background: #fff; transform: scale(1.15); }
+.hero-dot:hover { background: rgba(255,255,255,.5); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide { transition: none; }
+}
 
 /* =========================================================
    In Memoriam
@@ -189,8 +232,12 @@
    Responsive — solo layout propio de Home
    ========================================================= */
 @media (max-width: 960px) {
-  .hero-grid, .historia-grid, .contacto-grid { grid-template-columns: 1fr; }
-  .hero-visual { order: -1; }
+  .historia-grid, .contacto-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .hero { min-height: 520px; }
+  .hero-scrim { background: linear-gradient(180deg, rgba(7,42,64,.55) 0%, rgba(7,42,64,.85) 75%); }
 }
 
 @media (max-width: 520px) {
