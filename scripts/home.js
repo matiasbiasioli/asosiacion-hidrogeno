@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
    Crossfade automático cada 6s + navegación manual por los
    puntos. Las imágenes son PLACEHOLDERS generados — reemplazar
    los archivos en assets/img/hero-1.jpg, hero-2.jpg y hero-3.jpg
-   por las fotos reales del cliente (mismo nombre, sin tocar
-   este archivo ni el HTML).
+   
 ----------------------------------------------------------- */
 function initHeroSlider() {
   const slider = document.getElementById('hero-slider');
@@ -54,7 +53,7 @@ function initHeroSlider() {
 
   let timer;
   function startAutoplay() {
-    if (prefersReducedMotion) return; // no autoplay si el usuario prefiere menos movimiento
+    if (prefersReducedMotion) return; 
     timer = setInterval(() => goTo(current + 1), AUTOPLAY_MS);
   }
   function resetAutoplay() {
@@ -68,9 +67,8 @@ function initHeroSlider() {
 /* -----------------------------------------------------------
    Formulario de contacto
    -----------------------------------------------------------
-   Validación en cliente. El envío real (fetch a un endpoint PHP,
-   FormSubmit, etc.) se conecta acá mismo, en submitContactForm(),
-   una vez que definan con el cliente cómo procesan el mail.
+   Validación en cliente + envío real vía fetch a contacto.php.
+   
 ----------------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById('contact-form');
@@ -121,12 +119,28 @@ function setStatus(el, message, type) {
 }
 
 /**
- * Placeholder de envío. Reemplazar por el endpoint real
- * (mismo patrón PHP que usaron en savinistudio.com, o un servicio
- * externo tipo FormSubmit/Formspree si prefieren no tocar cPanel).
+ * Envía el formulario a contacto.php vía fetch, sin recargar la página.
+ * Requiere un hosting con PHP real (no funciona con Live Server / file://).
  */
 function submitContactForm(fields) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, 700); // simula latencia de red
+  const form = document.getElementById('contact-form');
+  const formData = new FormData(form);
+
+  return fetch(form.action, {
+    method: 'POST',
+    body: formData,
+    headers: { 'X-Requested-With': 'XMLHttpRequest' },
+  }).then(async (res) => {
+    let data = {};
+    try {
+      data = await res.json();
+    } catch {
+      // Si el hosting no tiene PHP corriendo, la respuesta no es JSON:
+      // lo tratamos como error en vez de romper con una excepción rara.
+    }
+    if (!res.ok || !data.ok) {
+      throw new Error(data.error || 'Error al enviar');
+    }
+    return data;
   });
 }
