@@ -59,7 +59,7 @@ if (mb_strlen($name) > 150 || mb_strlen($message) > 5000) {
 // TODO: confirmar si este es el mail definitivo del cliente para recibir consultas.
 $destinatario = 'aahidrogeno@gmail.com';
 
-$asunto = 'Nuevo mensaje de contacto — Web AAH';
+$asunto = 'Nuevo mensaje contacto — Web AAH';
 
 $cuerpo  = "Nombre: {$name}\n";
 $cuerpo .= "Email: {$email}\n\n";
