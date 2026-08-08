@@ -1,16 +1,4 @@
 <?php
-/**
- * AAH — contacto.php
- * -----------------------------------------------------------
- * Recibe el POST del formulario de contacto (index.html #contacto),
- * valida los campos y envía el email. Responde en JSON para que
- * home.js pueda mostrar el mensaje de éxito/error sin recargar la página.
- *
- * IMPORTANTE: esto necesita un hosting con PHP real (cPanel, Hostinger, etc.).
- * NO funciona abriendo el sitio con Live Server / file:// — para probarlo
- * hay que subirlo al hosting, o correr un servidor PHP local (ej: XAMPP,
- * o `php -S localhost:8000` desde esta carpeta).
- */
 
 header('Content-Type: application/json; charset=utf-8');
 
@@ -55,11 +43,18 @@ if (mb_strlen($name) > 150 || mb_strlen($message) > 5000) {
     exit;
 }
 
+// --- Sanitizar contra inyección de headers ---
+// Si alguien mete un salto de línea en "nombre" o "email", podría inyectar
+// encabezados falsos (ej. Bcc:) y usar el formulario para mandar spam
+// a terceros a través de tu servidor. Los sacamos por las dudas.
+$name  = str_replace(["\r", "\n"], '', $name);
+$email = str_replace(["\r", "\n"], '', $email);
+
 // --- Destino del email ---
 // TODO: confirmar si este es el mail definitivo del cliente para recibir consultas.
 $destinatario = 'aahidrogeno@gmail.com';
 
-$asunto = 'Nuevo mensaje contacto — Web AAH';
+$asunto = 'Nuevo mensaje de contacto — Web AAH';
 
 $cuerpo  = "Nombre: {$name}\n";
 $cuerpo .= "Email: {$email}\n\n";
@@ -71,7 +66,7 @@ $cuerpo .= "Mensaje:\n{$message}\n";
 // "noreply@TUDOMINIO.com" por un mail real del dominio de la AAH una
 // vez que esté el hosting definitivo.
 $headers   = [];
-$headers[] = 'From: Formulario Web AAH <noreply@TUDOMINIO.com>';
+$headers[] = 'From: Formulario Web AAH <noreply@aah2.org>';
 $headers[] = 'Reply-To: ' . $name . ' <' . $email . '>';
 $headers[] = 'Content-Type: text/plain; charset=UTF-8';
 $headers[] = 'X-Mailer: PHP/' . phpversion();
