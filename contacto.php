@@ -52,7 +52,7 @@ $email = str_replace(["\r", "\n"], '', $email);
 
 // --- Destino del email ---
 // TODO: confirmar si este es el mail definitivo del cliente para recibir consultas.
-$destinatario = 'aahidrogeno@gmail.com';
+$destinatario = 'matiasbiasioli@gmail.com';
 
 $asunto = 'Nuevo mensaje de contacto — Web AAH';
 
