@@ -52,9 +52,9 @@ $email = str_replace(["\r", "\n"], '', $email);
 
 // --- Destino del email ---
 // TODO: confirmar si este es el mail definitivo del cliente para recibir consultas.
-$destinatario = 'matiasbiasioli@gmail.com';
+$destinatario = 'aahidrogeno@gmail.com';
 
-$asunto = 'Nuevo mensaje de contacto — Web AAH';
+$asunto = 'Nuevo Mensaje — Web AAH';
 
 $cuerpo  = "Nombre: {$name}\n";
 $cuerpo .= "Email: {$email}\n\n";
@@ -66,7 +66,7 @@ $cuerpo .= "Mensaje:\n{$message}\n";
 // "noreply@TUDOMINIO.com" por un mail real del dominio de la AAH una
 // vez que esté el hosting definitivo.
 $headers   = [];
-$headers[] = 'From: Formulario Web AAH <noreply@aah2.org>';
+$headers[] = 'From: Contacto Web AAH <noreply@aah2.org>';
 $headers[] = 'Reply-To: ' . $name . ' <' . $email . '>';
 $headers[] = 'Content-Type: text/plain; charset=UTF-8';
 $headers[] = 'X-Mailer: PHP/' . phpversion();
