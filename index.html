@@ -10,6 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0a5c8a">
+ 
   <link rel="stylesheet" href="styles/global.css">
   <link rel="stylesheet" href="styles/home.css">
 </head>
@@ -50,10 +57,11 @@
   </header>
 
   <main id="main">
+
     <!-- ===================== HERO ===================== -->
     <section class="hero">
       <div class="hero-slider" id="hero-slider">
-        <div class="hero-slide is-active" style="background-image:url('assets/img/hidrogeno1.jpg'); background-position: center 80%;"></div>
+        <div class="hero-slide is-active" style="background-image:url('assets/img/hidrogeno1.jpg'); background-position: center 90%"></div>
         <div class="hero-slide" style="background-image:url('assets/img/hidrogeno2.jpg')"></div>
         <div class="hero-slide" style="background-image:url('assets/img/hidrogeno3.jpg')"></div>
         <div class="hero-scrim" aria-hidden="true"></div>
@@ -111,30 +119,34 @@
           mejoramiento de la calidad de vida y el cuidado del planeta para las generaciones futuras.
         </p>
 
-        <div class="cards-grid three">
-          <article class="feature-card reveal-target">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" width="36" height="36"><circle cx="20" cy="20" r="18" fill="none" stroke="#4fc3f0" stroke-width="2.5"/><path d="M12 20a8 8 0 1116 0 8 8 0 01-16 0z" fill="none" stroke="#0a5c8a" stroke-width="2.5"/></svg>
+        <div class="flow-strip">
+          <div class="flow-step reveal-target">
+            <div class="flow-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" width="34" height="34"><circle cx="20" cy="20" r="18" fill="none" stroke="#4fc3f0" stroke-width="2.5"/><path d="M12 20a8 8 0 1116 0 8 8 0 01-16 0z" fill="none" stroke="#0a5c8a" stroke-width="2.5"/></svg>
             </div>
             <h3>Almacenamiento eficiente</h3>
             <p>El hidrógeno como reservorio natural donde coexisten las energías renovables que le dieron origen.</p>
-          </article>
+          </div>
 
-          <article class="feature-card reveal-target">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" width="36" height="36"><path d="M6 24h20l-4-4M26 16l4 4-4 4" stroke="#17a673" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div class="flow-connector" aria-hidden="true"><svg viewBox="0 0 60 24" preserveAspectRatio="none"><path d="M2 12h48M50 12l-8-8M50 12l-8 8" fill="none" stroke="#c8d8e0" stroke-width="2"/></svg></div>
+
+          <div class="flow-step reveal-target">
+            <div class="flow-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" width="34" height="34"><path d="M6 24h20l-4-4M26 16l4 4-4 4" stroke="#17a673" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <h3>Transporte sostenible</h3>
             <p>El vector energético más eficiente para conducir y distribuir energía limpia a los usuarios finales.</p>
-          </article>
+          </div>
 
-          <article class="feature-card reveal-target">
-            <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 40 40" width="36" height="36"><path d="M20 4l4 12h12l-10 8 4 12-10-8-10 8 4-12-10-8h12z" fill="none" stroke="#0a5c8a" stroke-width="2"/></svg>
+          <div class="flow-connector" aria-hidden="true"><svg viewBox="0 0 60 24" preserveAspectRatio="none"><path d="M2 12h48M50 12l-8-8M50 12l-8 8" fill="none" stroke="#c8d8e0" stroke-width="2"/></svg></div>
+
+          <div class="flow-step reveal-target">
+            <div class="flow-icon" aria-hidden="true">
+              <svg viewBox="0 0 40 40" width="34" height="34"><path d="M20 4l4 12h12l-10 8 4 12-10-8-10 8 4-12-10-8h12z" fill="none" stroke="#0a5c8a" stroke-width="2"/></svg>
             </div>
             <h3>Desarrollo Patagonia</h3>
             <p>Proyectos concretos en la Antártida Argentina y la Patagonia, desde Pico Truncado hasta la Base Esperanza.</p>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -145,22 +157,28 @@
         <h2 class="section-title">Objetivos estratégicos</h2>
         <p class="section-lead">Propender a una mejor calidad de vida para las generaciones futuras y al uso eficiente de la energía disponible.</p>
 
-        <div class="cards-grid three">
-          <article class="obj-card reveal-target">
-            <span class="obj-number">01</span>
-            <h3>Preservación ambiental</h3>
-            <p>Contribuir a la recuperación y preservación del medio ambiente, especialmente en las grandes ciudades.</p>
-          </article>
-          <article class="obj-card reveal-target">
-            <span class="obj-number">02</span>
-            <h3>Vinculación sectorial</h3>
-            <p>Promover la coordinación entre gobierno, industrias, instituciones de I+D y universidades.</p>
-          </article>
-          <article class="obj-card reveal-target">
-            <span class="obj-number">03</span>
-            <h3>Difusión y enseñanza</h3>
-            <p>Difundir el concepto de la tecnología del hidrógeno en todos los niveles educativos.</p>
-          </article>
+        <div class="obj-strip">
+          <div class="obj-strip-item reveal-target">
+            <span class="obj-strip-number">01</span>
+            <div>
+              <h3>Preservación ambiental</h3>
+              <p>Contribuir a la recuperación y preservación del medio ambiente, especialmente en las grandes ciudades.</p>
+            </div>
+          </div>
+          <div class="obj-strip-item reveal-target">
+            <span class="obj-strip-number">02</span>
+            <div>
+              <h3>Vinculación sectorial</h3>
+              <p>Promover la coordinación entre gobierno, industrias, instituciones de I+D y universidades.</p>
+            </div>
+          </div>
+          <div class="obj-strip-item reveal-target">
+            <span class="obj-strip-number">03</span>
+            <div>
+              <h3>Difusión y enseñanza</h3>
+              <p>Difundir el concepto de la tecnología del hidrógeno en todos los niveles educativos.</p>
+            </div>
+          </div>
         </div>
 
         <a href="objetivos.html" class="btn btn-outline objetivos-cta">Ver los 11 objetivos completos</a>
@@ -243,7 +261,7 @@
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
           <!-- Honeypot anti-spam: invisible para personas, los bots suelen completarlo -->
-          <div style="display: none;" class="form-row form-honeypot" aria-hidden="true">
+          <div class="form-row form-honeypot" aria-hidden="true">
             <label for="website">No completar este campo</label>
             <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
           </div>

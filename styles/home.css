@@ -120,34 +120,70 @@
 .memoriam-link:hover { text-decoration: underline; }
 
 /* =========================================================
-   Feature / Objetivos / Destacados cards
+   Propósito — flujo conectado (ícono → línea → ícono)
    ========================================================= */
-.feature-card, .obj-card, .destacado-card {
-  background: var(--color-surface);
-  border-radius: var(--radius-md);
-  padding: 1.75rem;
-  box-shadow: var(--shadow-card);
-  transition: transform var(--transition), box-shadow var(--transition);
+.flow-strip {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
 }
-.feature-card:hover, .obj-card:hover, .destacado-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card-hover);
-}
-.feature-icon {
+.flow-step { flex: 1; min-width: 0; }
+.flow-connector { flex-shrink: 0; width: 48px; margin-top: 22px; }
+.flow-connector svg { width: 100%; height: 24px; }
+
+.flow-icon {
   width: 56px; height: 56px;
   display: flex; align-items: center; justify-content: center;
   background: #eaf6fb;
   border-radius: var(--radius-sm);
   margin-bottom: 1rem;
 }
-.feature-card h3, .obj-card h3, .destacado-card h3 { font-size: 1.1rem; }
+.flow-step h3 { font-size: 1.1rem; }
+.flow-step p { font-size: .92rem; }
 
-.obj-number {
+/* =========================================================
+   Objetivos preview — tira numerada (sin cajas)
+   ========================================================= */
+.obj-strip {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.obj-strip-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+.obj-strip-item:last-child { border-bottom: 1px solid var(--color-border); }
+.obj-strip-number {
+  flex-shrink: 0;
   font-family: var(--font-display);
   font-weight: 700;
   color: var(--color-hydrogen);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
+  width: 3ch;
 }
+.obj-strip-item h3 { font-size: 1.1rem; margin-bottom: .35rem; }
+.obj-strip-item p { font-size: .92rem; margin-bottom: 0; }
+
+/* =========================================================
+   Destacados
+   ========================================================= */
+.destacado-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.destacado-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+.destacado-card h3 { font-size: 1.1rem; }
 .objetivos-cta { margin-top: 2.5rem; }
 
 .destacado-icon {
@@ -224,6 +260,15 @@
   outline: none;
 }
 .form-row.has-error input, .form-row.has-error textarea { border-color: #d64545; }
+
+/* Honeypot: oculto para personas, visible para bots que completan todo */
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 .form-status { font-size: .88rem; margin-top: .75rem; min-height: 1.2em; }
 .form-status.success { color: var(--color-accent-dark); }
 .form-status.error { color: #d64545; }
@@ -233,11 +278,14 @@
    ========================================================= */
 @media (max-width: 960px) {
   .historia-grid, .contacto-grid { grid-template-columns: 1fr; }
+  .flow-strip { flex-direction: column; }
+  .flow-connector { display: none; }
 }
 
 @media (max-width: 600px) {
   .hero { min-height: 520px; }
   .hero-scrim { background: linear-gradient(180deg, rgba(7,42,64,.55) 0%, rgba(7,42,64,.85) 75%); }
+  .obj-strip-item { gap: 1rem; }
 }
 
 @media (max-width: 520px) {
