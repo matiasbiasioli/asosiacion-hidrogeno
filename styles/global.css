@@ -312,6 +312,7 @@ button { font-family: inherit; cursor: pointer; }
   color: #8fb4c8;
 }
 .footer-bottom a:hover { color: #fff; }
+.footer-bottom .credit a { color: #fff; }
 
 /* =========================================================
    Scroll reveal — activado por global.js en cualquier página

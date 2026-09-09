@@ -1,143 +1,203 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería de fotos | Asociación Argentina del Hidrógeno</title>
-  <meta name="description" content="Galería fotográfica de la Asociación Argentina del Hidrógeno: vehículos, plantas experimentales y proyectos de hidrógeno en Argentina y el mundo.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de fotos | Asociación Argentina del Hidrógeno</title>
+    <meta
+      name="description"
+      content="Galería fotográfica de la Asociación Argentina del Hidrógeno: vehículos, plantas experimentales y proyectos de hidrógeno en Argentina y el mundo."
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="styles/global.css">
-  <link rel="stylesheet" href="styles/galeria.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/galeria.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido principal</a>
 
-  <a class="skip-link" href="#main">Saltar al contenido principal</a>
-
-  <!-- ===================== HEADER ===================== -->
-  <header class="site-header" id="site-header">
-    <div class="header-top">
-      <div class="container header-top-inner">
-        <p class="founding-note">Fundada en Buenos Aires el 7 de junio de 1996 · 30 años impulsando las tecnologías del hidrógeno</p>
-      </div>
-    </div>
-
-    <div class="container header-main">
-      <a href="index.html" class="brand" aria-label="AAH - Ir al inicio">
-        <img src="assets/img/logo.png" alt="Asociación Argentina del Hidrógeno" class="brand-logo">
-      </a>
-
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú de navegación">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="institucional.html">Institucional</a></li>
-          <li><a href="objetivos.html">Objetivos</a></li>
-          <li><a href="el-hidrogeno.html">El Hidrógeno</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="biblioteca.html">Biblioteca</a></li>
-          <li><a href="normativa.html">Normativa y Legislación</a></li>
-          <li><a href="galeria.html" aria-current="page">Galería</a></li>
-        </ul>
-        <a href="index.html#contacto" class="btn btn-outline nav-cta">Contacto</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
-
-    <!-- ===================== PAGE HERO ===================== -->
-    <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow">Galería</span>
-        <h1>Fotografías</h1>
-        <p class="section-lead">
-          Vehículos, plantas experimentales y proyectos de hidrógeno documentados a lo largo de la
-          historia de la AAH, en Argentina y el mundo.
-        </p>
-        <p class="rights-note">
-          Las imágenes son propiedad personal de los integrantes de la asociación y pueden ser
-          utilizadas sin fines comerciales si son citadas correspondientemente.
-        </p>
-      </div>
-    </section>
-
-    <!-- ===================== GRID DE FOTOS ===================== -->
-    <section class="section gallery-section">
-      <div class="container">
-        <div class="gallery-grid" id="gallery-grid">
-          <!-- cada figure es un item clickeable que abre el lightbox -->
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header" id="site-header">
+      <div class="header-top">
+        <div class="container header-top-inner">
+          <p class="founding-note">
+            Fundada en Buenos Aires el 7 de junio de 1996 · 30 años impulsando
+            las tecnologías del hidrógeno
+          </p>
         </div>
       </div>
-    </section>
 
-    <!-- ===================== ARTÍCULO DESTACADO ===================== -->
-    <section class="section article-highlight-section alt-bg">
-      <div class="container">
-        <article class="article-highlight reveal-target">
-          <div class="article-highlight-icon" aria-hidden="true">📄</div>
-          <div>
-            <span class="eyebrow">Publicación científica</span>
-            <h3>The energy transition towards hydrogen utilization for green life and sustainable human development in Patagonia</h3>
-            <p>Artículo de acceso abierto publicado en ScienceDirect / International Journal of Hydrogen Energy.</p>
-            <a href="https://www.sciencedirect.com/science/article/pii/S0360319920304717?dgcid=author" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-              Leer artículo completo
-            </a>
+      <div class="container header-main">
+        <a href="index.html" class="brand" aria-label="AAH - Ir al inicio">
+          <img
+            src="assets/img/logo.png"
+            alt="Asociación Argentina del Hidrógeno"
+            class="brand-logo"
+          />
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="Abrir menú de navegación"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav
+          class="primary-nav"
+          id="primary-nav"
+          aria-label="Navegación principal"
+        >
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="institucional.html">Institucional</a></li>
+            <li><a href="objetivos.html">Objetivos</a></li>
+            <li><a href="el-hidrogeno.html">El Hidrógeno</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="biblioteca.html">Biblioteca</a></li>
+            <li><a href="normativa.html">Normativa y Legislación</a></li>
+            <li><a href="galeria.html" aria-current="page">Galería</a></li>
+          </ul>
+          <a href="index.html#contacto" class="btn btn-outline nav-cta"
+            >Contacto</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ===================== PAGE HERO ===================== -->
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Galería</span>
+          <h1>Fotografías</h1>
+          <p class="section-lead">
+            Vehículos, plantas experimentales y proyectos de hidrógeno
+            documentados a lo largo de la historia de la AAH, en Argentina y el
+            mundo.
+          </p>
+          <p class="rights-note">
+            Las imágenes son propiedad personal de los integrantes de la
+            asociación y pueden ser utilizadas sin fines comerciales si son
+            citadas correspondientemente.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===================== GRID DE FOTOS ===================== -->
+      <section class="section gallery-section">
+        <div class="container">
+          <div class="gallery-grid" id="gallery-grid">
+            <!-- cada figure es un item clickeable que abre el lightbox -->
           </div>
-        </article>
-      </div>
-    </section>
+        </div>
+      </section>
 
-  </main>
+      <!-- ===================== ARTÍCULO DESTACADO ===================== -->
+      <section class="section article-highlight-section alt-bg">
+        <div class="container">
+          <article class="article-highlight reveal-target">
+            <div class="article-highlight-icon" aria-hidden="true">📄</div>
+            <div>
+              <span class="eyebrow">Publicación científica</span>
+              <h3>
+                The energy transition towards hydrogen utilization for green
+                life and sustainable human development in Patagonia
+              </h3>
+              <p>
+                Artículo de acceso abierto publicado en ScienceDirect /
+                International Journal of Hydrogen Energy.
+              </p>
+              <a
+                href="assets/pdf/Magazine-the-energy-transition.pdf"
+                download="Magazine-the-energy-transition.pdf"
+                class="btn btn-outline"
+              >
+                Leer articulo completo
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
-  <!-- ===================== LIGHTBOX ===================== -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
-    <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar imagen ampliada">✕</button>
-    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Foto anterior">‹</button>
-    <figure class="lightbox-figure">
-      <img src="" alt="" id="lightbox-img">
-      <figcaption id="lightbox-caption"></figcaption>
-    </figure>
-    <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Foto siguiente">›</button>
-    <span class="lightbox-counter" id="lightbox-counter"></span>
-  </div>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <strong>AAH</strong>
-        <p>Asociación Argentina del Hidrógeno</p>
-      </div>
-
-      <nav class="footer-nav" aria-label="Enlaces del pie de página">
-        <a href="institucional.html">Institucional</a>
-        <a href="objetivos.html">Objetivos</a>
-        <a href="el-hidrogeno.html">El Hidrógeno</a>
-        <a href="proyectos.html">proyectos</a>
-        <a href="biblioteca.html">Biblioteca</a>
-        <a href="normativa.html">Normativa y Legislación</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
-
-      <div class="footer-social" aria-label="Redes sociales">
-        <a href="#" aria-label="LinkedIn">in</a>
-        <a href="#" aria-label="Twitter">X</a>
-        <a href="#" aria-label="YouTube">▶</a>
-      </div>
+    <!-- ===================== LIGHTBOX ===================== -->
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Imagen ampliada"
+      hidden
+    >
+      <button
+        class="lightbox-close"
+        id="lightbox-close"
+        aria-label="Cerrar imagen ampliada"
+      >
+        ✕
+      </button>
+      <button
+        class="lightbox-nav lightbox-prev"
+        id="lightbox-prev"
+        aria-label="Foto anterior"
+      >
+        ‹
+      </button>
+      <figure class="lightbox-figure">
+        <img src="" alt="" id="lightbox-img" />
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+      <button
+        class="lightbox-nav lightbox-next"
+        id="lightbox-next"
+        aria-label="Foto siguiente"
+      >
+        ›
+      </button>
+      <span class="lightbox-counter" id="lightbox-counter"></span>
     </div>
-    <div class="footer-bottom container">
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <strong>AAH</strong>
+          <p>Asociación Argentina del Hidrógeno</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Enlaces del pie de página">
+          <a href="institucional.html">Institucional</a>
+          <a href="objetivos.html">Objetivos</a>
+          <a href="el-hidrogeno.html">El Hidrógeno</a>
+          <a href="proyectos.html">proyectos</a>
+          <a href="biblioteca.html">Biblioteca</a>
+          <a href="normativa.html">Normativa y Legislación</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="footer-social" aria-label="Redes sociales">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">X</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-bottom container">
       <p>© 2026 Asociación Argentina del Hidrógeno. Todos los derechos reservados.</p>
+      <p class="credit">Sitio desarrollado por <a href="https://www.saviadigital.com.ar" target="_blank" rel="noopener noreferrer">Savia Digital</a> y <a href="https://www.savinistudio.com" target="_blank" rel="noopener noreferrer">Savini Studio</a></p>
     </div>
-  </footer>
+    </footer>
 
-  <script src="scripts/global.js"></script>
-  <script src="scripts/galeria.js"></script>
-</body>
+    <script src="scripts/global.js"></script>
+    <script src="scripts/galeria.js"></script>
+  </body>
 </html>
